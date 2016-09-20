@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="50%" height="100%" styleNames="vbox1">
+	<style>
+		#views .page {
+			padding: 10;
+		}
+ListSelector  {
+    fontSize: 14;
+    textColor: #012345;
+}		
+	</style>
+<grid columns="3">
+<hbox>
+ <listSelector id="r1" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c11' text="A" group="ogrp1" selected="true"/>
+ <optionbox id='c12' text="B" group="ogrp1" />
+ <optionbox id='c13' text="C" group="ogrp1"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r2" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c21' text="A" group="ogrp2" selected="true"/>
+ <optionbox id='c22' text="B" group="ogrp2" />
+ <optionbox id='c23' text="C" group="ogrp2"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r3" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox text="A" group="ogrp3" selected="true"/>
+ <optionbox id='c32' text="B" group="ogrp3" />
+ <optionbox id='c33' text="C" group="ogrp3"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r4" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c41' text="A" group="ogrp4" selected="true"/>
+ <optionbox id='c42' text="B" group="ogrp4" />
+ <optionbox id='c43' text="C" group="ogrp4"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r5" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c51' text="A" group="ogrp5" selected="true"/>
+ <optionbox id='c52' text="B" group="ogrp5" />
+ <optionbox id='c53' text="C" group="ogrp5"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r6" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c61' text="A" group="ogrp6" selected="true"/>
+ <optionbox id='c62' text="B" group="ogrp6" />
+ <optionbox id='c63' text="C" group="ogrp6"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r7" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c71' text="A" group="ogrp7" selected="true"/>
+ <optionbox id='c72' text="B" group="ogrp7" />
+ <optionbox id='c73' text="C" group="ogrp7"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r8" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c81' text="A" group="ogrp8" selected="true"/>
+ <optionbox id='c82' text="B" group="ogrp8" />
+ <optionbox id='c83' text="C" group="ogrp8"  />
+</hbox>
+
+<hbox>
+ <listSelector id="r9" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='c91' text="A" group="ogrp9" selected="true"/>
+ <optionbox id='c92' text="B" group="ogrp9" />
+ <optionbox id='c93' text="C" group="ogrp9"  />
+</hbox>
+
+<hbox>
+ <listSelector id="rA" text="0" width="60" autoSize="false">
+  <array>1,2,3</array>
+ </listSelector>
+</hbox>
+<spacer width="5" />
+<hbox>
+ <optionbox id='cA1' text="A" group="ogrpA" selected="true"/>
+ <optionbox id='cA2' text="B" group="ogrpA" />
+ <optionbox id='cA3' text="C" group="ogrpA"  />
+</hbox>
+
+</grid>
+
+<vbox text="Image Panel" id="nopadding">
+<text text="A,B,C - słupek" />
+<text text="numer - krążek od najmniejszego" />
+</vbox>
+</vbox>

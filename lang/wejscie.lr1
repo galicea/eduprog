@@ -1,0 +1,12 @@
+<Z> ::= <W>
+<W> ::= <W> ADDSYM <A>
+<W> ::= <W> SUBSYM <A>
+<W> ::= <A>
+<A> ::= <A> MULSYM <A>
+<A> ::= <A> DIVSYM <A>
+<A> ::= <B>
+<B> ::= ADDSYM <C>
+<B> ::= SUBSYM <C>
+<B> ::= <C>
+<C> ::= LPAREN <W> RPAREN
+<C> ::= NUMSYM

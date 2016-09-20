@@ -1,0 +1,71 @@
+A(&A|9&)@%
+wyrazenie po zamianie na notacje beznawiasowa : 
+ 1 1 2|*+
+tablica terminali: 
+ 1 A
+ 2 9
+
+Automat niezdeterminowany:
+
+stan poczatkowy : 1
+ilosc stanow    : 8
+zbior symboli terminalnych
+   A   9
+
+tabela przejsc:
+           A                 9                
+------------------------------------
+ 1 |  2            |               |
+------------------------------------
+ 2 |  4            |  6            |
+------------------------------------
+ 3 |  4            |               |
+------------------------------------
+ 4 |  4            |  6            |
+------------------------------------
+ 5 |               |  6            |
+------------------------------------
+ 6 |  4            |  6            |
+------------------------------------
+ 7 |  4            |  6            |
+------------------------------------
+ 8 |  4            |  6            |
+------------------------------------
+stany koncowe: 
+2 4 6 8 
+
+Automat po determinacji
+stan poczatkowy : 1
+ilosc stanow    : 4
+zbior symboli terminalnych
+  A  9
+
+tabela przejsc:
+       A   9   
+--------------
+ 1   |  2|  0|
+--------------
+ 2   |  3|  4|
+--------------
+ 3   |  3|  4|
+--------------
+ 4   |  3|  4|
+--------------
+stany koncowe: 
+234
+
+Automat po redukcji:
+stan poczatkowy : 1
+ilosc stanow    : 2
+zbior symboli terminalnych
+  A  9
+
+tabela przejsc:
+       A   9   
+--------------
+ 1   |  2|  0|
+--------------
+ 2   |  2|  2|
+--------------
+stany koncowe: 
+2
