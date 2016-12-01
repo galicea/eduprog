@@ -1,0 +1,5 @@
+# create python2.7 environment
+cd ..
+#sudo apt-get install python2.7-virtualenv
+virtualenv env --system-site-packages --python=/usr/bin/python2.7
+sudo python2.7 /usr/lib/python2.7/dist-packages/virtualenv.py  env --system-site-packages --python=/usr/bin/python2.7

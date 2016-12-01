@@ -1,0 +1,2 @@
+#  npm install -g less
+lessc less/arg.less >../assets/css/arg.css

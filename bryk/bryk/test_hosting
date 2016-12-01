@@ -1,0 +1,5 @@
+cd ~
+cd bryk
+source env/bin/activate
+cd bryk
+python bryk.py

@@ -1,0 +1,65 @@
+{%extends "base.html"%}
+
+{%block title%}Start{% endblock %}
+
+{%block body%}
+ <div class="jumbotron">
+  <h1>Bryk</h1>
+ </div>
+
+ <div class="row">
+  <div class="col-lg-12">
+   <h1>Projekt edukacyjny</h1>
+  </div>
+ </div>
+
+ <div class="row">
+  <div class="col-md-4">
+   <h3>Tworzenie konta</h3>
+   <p>Po utworzeniu konta możesz dodać do systemu wybrane zagadnienie (w obecnej chwili tylko jedno).<br />
+   Zagadnienie składa się z tytułu, opisu, oraz skryptu w języku Python<br />
+   </p>
+   <p>Aby utworzyć konto, musisz podać identyfikator i hasło. Opcjonalnie - temat zagadnienia (można go dodać później).</p>
+  </div>
+
+  <div class="col-md-4">
+   <h3>Logowanie</h3>
+   <p>Aby się zalogować, trzeba podać identyfikator i hasło, jakie podałeś przy tworzeniu konta</p>
+   <p>Po zalogowaniu możesz zmieniać opis zagadnienia, jego opis i skrypt w języku Python</p> 
+  </div>
+
+  <div class="col-md-4">
+   <h3>Zagadnienia</h3>
+   <p>Poniżej spis zdefiniowanych zagadnień.</p>
+   <p>Jeśli jesteś zalogowany, to przy zdefiniowanym przez Ciebie zagadnieniu pojawiają się dwa linki: [OPIS] i [Python].</p>
+   <p>OPIS - zmieniamy tytuł i opis zagadnienia</p>
+   <p>Python - zmieniamy skrypt</p>
+  </div>
+ </div>
+
+ <div class="row">
+  <div class="col-md-12">
+   <h3>Zagadnienia</h3>
+{% if zagadnienia %}
+<table>
+{% for z in zagadnienia %}
+<tr>
+<td><form method="POST" action="{{ url_for('.zagadnienie') }}"> <input type="hidden" name="id" value="{{ z.id }}"><input type="submit" value="{{ z.tytul }}"></form></td>
+<td style="padding-left:40px">
+{% if current_user_id %}
+ {% if current_user_id==z.user_id %}
+   <a href="zmiana/{{ z.id }}">OPIS</a> <br />
+   <a href="python">Python</a>
+ {% endif %}
+{% endif %}
+</p>
+</tr>
+</article>
+{% endfor  %}
+</table>
+{% else %}
+   <p>Brak zagadnień.</p>
+{% endif %}
+  </div>
+ </div>
+{%endblock%}
