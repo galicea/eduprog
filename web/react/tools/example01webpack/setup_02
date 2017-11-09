@@ -1,0 +1,13 @@
+cp webpack.config.js example01
+cp App.js  example01/src/App.js
+cd example01
+
+# babel
+yarn add --save-dev babel-cli babel-core babel-preset-es2015 babel-preset-react
+# webpack
+yarn add --save-dev webpack babel-loader css-loader svg-loader
+# zaleznosci
+yarn upgrade
+# tworzy plik example01.js
+webpack
+

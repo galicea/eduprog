@@ -1,0 +1,12 @@
+# pusty package.json:
+npm init
+
+# react:
+npm install --save-dev react
+npm install --save-dev react-dom
+
+# kompilator babel:
+npm install --save-dev babel-cli babel-preset-es2015
+
+# + pluginy:
+npm i babel-plugin-transform-react-jsx

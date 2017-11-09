@@ -1,0 +1,14 @@
+# pusty package.json:
+#npm init
+
+# react:
+npm install --save-dev react
+npm install --save-dev react-dom
+
+# babel:
+npm install --save-dev babel-cli babel-preset-es2015 babel-preset-react babel-loader
+
+# webpack:
+npm install --save-dev webpack
+
+webpack

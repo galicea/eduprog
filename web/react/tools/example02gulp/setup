@@ -1,0 +1,13 @@
+# pusty package.json:
+npm init
+
+# react:
+npm install --save-dev react
+npm install --save-dev react-dom
+
+# babel + gulp:
+npm install --save-dev babel-cli babel-preset-es2015 babel-preset-react
+npm install --save-dev gulp gulp-babel
+
+
+gulp

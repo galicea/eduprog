@@ -1,0 +1,2 @@
+# windows: .\node_modules\.bin\babel --plugins transform-react-jsx index.jsx
+./node_modules/.bin/babel --plugins transform-react-jsx helloworld.jsx >helloworld.js

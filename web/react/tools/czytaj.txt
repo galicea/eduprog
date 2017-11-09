@@ -1,0 +1,14 @@
+example00webpack:
+setup - kompiluje helloworld.jsx do .js przy uzyciu webpack
+ 
+example01webpac:
+setup_01 - tylko tworzy aplikację (create-react-app) i  ją uruchamia (babel z chwilą otwarcia strony)
+setup_02 - webpack pakuje .js do example02.js (pomijamy SVG)
+
+
+example02gulp:
+setup - generuje aplikacje w katalogu dist
+
+
+example03gulp_webpack:
+setup - generuje aplikacje w katalogu dist (gulp wywoluje webpack)

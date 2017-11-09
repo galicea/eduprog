@@ -1,0 +1,4 @@
+yarn add react-buttons
+yarn add react-addons-pure-render-mixin
+yarn upgrade
+yarn start

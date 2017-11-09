@@ -1,0 +1,48 @@
+import React, {Component} from 'react';
+
+
+class Tekst extends Component {
+   render() {
+     return (
+        <span>{this.props.normal} <i>{this.props.italic}</i></span>
+    );
+  }
+}
+
+
+class Przycisk extends Component {
+   render() {
+     return (
+        <button onClick={this.props.akcja}>Kliknij {this.props.opis} </button>
+    );
+  }
+}
+
+
+
+class App extends Component {
+
+  uwaga='uwaga';
+
+  klikniecie(komunikat='bez parametru') { // funkcja JavaScript
+    console.log('Klik2');
+    alert(komunikat);
+  }
+
+  render() {
+   // zapis  () => this.klikniecie() oznacza anonimową funkcję bez parametrów zwracającą kod this.klikniecie() do wykonania
+    return (
+      <div>
+        <Tekst italic='kursywa' normal='test' /><br />
+        <Przycisk akcja={ () => { alert('Klik1'); } }  opis='alert/klik1'  />
+        <Przycisk akcja={ function() { alert('klik2'); } } opis='klik2/function()'  />
+        <Przycisk akcja={ function() { this.klikniecie(this.uwaga); }.bind(this) } opis='klik3/function()/bind'  />
+        <Przycisk akcja={ () => this.klikniecie(this.uwaga) } opis='klik4/this'  />
+      </div>
+    );
+  }
+
+}
+
+export default App;
+

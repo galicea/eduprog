@@ -1,0 +1,14 @@
+example00babel:
+  cd example00babel
+  ./setup
+  
+example01create-react-app:
+cd example01create-react-app
+./create_example01
+
+pozostałe:
+  cd <nazwa katalogu>
+  ./build
+  ./run
+
+

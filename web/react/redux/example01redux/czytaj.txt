@@ -1,0 +1,4 @@
+http://www.systango.com/blog/free-react-redux-starter-kit/
+http://blog.tylerbuchea.com/super-simple-react-redux-application-example/
+
+npm install -S react-buttons
