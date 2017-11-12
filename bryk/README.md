@@ -1,1 +1,1 @@
-moved to: https://github.com/galicea/bryk```
+moved to: https://github.com/galicea/bryk
