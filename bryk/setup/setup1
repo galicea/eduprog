@@ -1,3 +1,0 @@
-wget https://github.com/google/closure-library/zipball/master -O closure.zip
-unzip closure.zip
-mv google-closure-library-cd0e794 ../bryk/closure-library

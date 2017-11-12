@@ -1,8 +1,0 @@
-export FLASK_APP=initdb
-# flas >=0.11
-#flask run
-# or: python -m flask run
-
-sqlite3 bryk.db < schema.sql
-
-
