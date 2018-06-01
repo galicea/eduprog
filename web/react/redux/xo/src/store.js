@@ -27,14 +27,16 @@ const reducer = (state, action) => {
       nkto='o';
       nstan = 'ruch: o';
     }
-    if (   ((nxo[0] !== '?') && (nxo[0]===nxo[1]) && (nxo[0]===nxo[2]))
-         | ((nxo[3] !== '?') && (nxo[3]===nxo[4]) && (nxo[3]===nxo[5]))
-         | ((nxo[6] !== '?') && (nxo[6]===nxo[7]) && (nxo[6]===nxo[8]))
-         | ((nxo[0] !== '?') && (nxo[0]===nxo[3]) && (nxo[0]===nxo[6]))
-         | ((nxo[1] !== '?') && (nxo[1]===nxo[4]) && (nxo[1]===nxo[7]))
-         | ((nxo[2] !== '?') && (nxo[2]===nxo[5]) && (nxo[2]===nxo[8]))
-         | ((nxo[0] !== '?') && (nxo[0]===nxo[4]) && (nxo[0]===nxo[8]))
-         | ((nxo[2] !== '?') && (nxo[2]===nxo[4]) && (nxo[2]===nxo[6]))  ) { nstan = 'KONIEC';}
+    if (    ((nxo[0] !== '?') && (nxo[0]===nxo[1]) && (nxo[0]===nxo[2]))
+         || ((nxo[3] !== '?') && (nxo[3]===nxo[4]) && (nxo[3]===nxo[5]))
+         || ((nxo[6] !== '?') && (nxo[6]===nxo[7]) && (nxo[6]===nxo[8]))
+         || ((nxo[0] !== '?') && (nxo[0]===nxo[3]) && (nxo[0]===nxo[6]))
+         || ((nxo[1] !== '?') && (nxo[1]===nxo[4]) && (nxo[1]===nxo[7]))
+         || ((nxo[2] !== '?') && (nxo[2]===nxo[5]) && (nxo[2]===nxo[8]))
+         || ((nxo[0] !== '?') && (nxo[0]===nxo[4]) && (nxo[0]===nxo[8]))
+         || ((nxo[2] !== '?') && (nxo[2]===nxo[4]) && (nxo[2]===nxo[6]))  ) { 
+           nstan = 'KONIEC';
+    }
     return {
      ...state, // spread operator https://redux.js.org/recipes/using-object-spread-operator
       xo : nxo,

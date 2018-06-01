@@ -1,0 +1,22 @@
+<table className="plansza">
+   <tbody>
+     <tr>
+      <td x="0" y="0" (click)="click($event, 0, xo[0])"> {{ xo[0] }} </td>
+      <td x="1" y="0" (click)="click($event, 1, xo[1])"> {{ xo[1] }} </td>
+      <td x="2" y="0" (click)="click($event, 2, xo[2])"> {{ xo[2] }} </td>
+     </tr>
+     <tr>
+      <td x="0" y="1" (click)="click($event, 3, xo[3])"> {{ xo[3] }} </td>
+      <td x="1" y="1" (click)="click($event, 4, xo[4])"> {{ xo[4] }} </td>
+      <td x="2" y="1" (click)="click($event, 5, xo[5])"> {{ xo[5] }} </td>
+     </tr>
+     <tr>
+      <td x="0" y="2" (click)="click($event, 6, xo[6])"> {{ xo[6] }} </td>
+      <td x="1" y="2" (click)="click($event, 7, xo[7])"> {{ xo[7] }} </td>
+      <td x="2" y="2" (click)="click($event, 8, xo[8])"> {{ xo[8] }} </td>
+     </tr>
+     <tr>
+      <td colSpan="3"> {{stanGry | async}} </td>
+     </tr>
+   </tbody>
+</table> 

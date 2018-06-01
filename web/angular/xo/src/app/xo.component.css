@@ -1,0 +1,12 @@
+td{
+  width: 60px;
+  height:60px;
+  border: 1px solid green;
+  text-align:center;
+}
+
+.plansza {
+  background-color: yellow;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
