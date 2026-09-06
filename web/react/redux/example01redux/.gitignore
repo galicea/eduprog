@@ -1,1 +1,9 @@
 node_modules
+
+# production
+build/
+dist/
+
+# misc
+npm-debug.log*
+yarn-error.log*

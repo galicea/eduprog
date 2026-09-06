@@ -1,46 +1,36 @@
 import { Component } from '@angular/core';
+import { xoActions } from './rx/actions';
+import { IStanAplikacji, store } from './rx/store';
 
-
-// redux
-import { NgRedux, select, select$ } from '@angular-redux/store'; // <- New
-import { xoActions } from './rx/actions'; // <- New
-import { IStanAplikacji, store } from "./rx/store"; // <- New
-import { Observable } from 'rxjs';
-//-
-
-// debug
-function objToString (obj) {
-  var str = '';
-  for (var p in obj) {
-      if (obj.hasOwnProperty(p)) {
-          str += p + '::' + obj[p] + '\n';
-      }
-  }
-  return str;
-}
-//-
 @Component({
   selector: 'xo-selector',
+  standalone: true,
   templateUrl: './xo.component.html',
-  styleUrls: ['./xo.component.css']
+  styleUrls: ['./xo.component.css'],
+  providers: [xoActions]
 })
 export class XoComponent {
-  @select() 'stanGry' ;
-  public xo : Array<string>;
+  public xo: string[];
+  public stanGry: string;
 
-constructor(                           
-  private ngRedux: NgRedux<IStanAplikacji>,
-  private actions: xoActions) {
-    this.xo = store.getState().xo; 
-//    this.xo = this.ngRedux.select( .... );    
-}
+  constructor(private actions: xoActions) {
+    const state: IStanAplikacji = store.getState();
+    this.xo = state.xo;
+    this.stanGry = state.stanGry;
+    // aktualizacja po każdym dispatchniu
+    store.subscribe(() => {
+      const s = store.getState();
+      this.xo = s.xo;
+      this.stanGry = s.stanGry;
+    });
+  }
 
-public click(event, n, item) {
-  const mapxy = [{x:'0',y:'0'},{x:'1',y:'0'},{x:'2',y:'0'},
-                 {x:'0',y:'1'},{x:'1',y:'1'},{x:'2',y:'1'},
-                 {x:'0',y:'2'},{x:'1',y:'2'},{x:'2',y:'2'}];
-  this.ngRedux.dispatch(this.actions.zmiana(mapxy[n].x,mapxy[n].y));
-  this.xo = store.getState().xo;
-}
-
+  public click(event: Event, n: number) {
+    const mapxy: string[][] = [
+      ['0', '0'], ['1', '0'], ['2', '0'],
+      ['0', '1'], ['1', '1'], ['2', '1'],
+      ['0', '2'], ['1', '2'], ['2', '2']
+    ];
+    store.dispatch(this.actions.zmiana(mapxy[n][0], mapxy[n][1]));
+  }
 }

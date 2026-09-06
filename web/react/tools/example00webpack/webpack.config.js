@@ -1,17 +1,20 @@
-var path = require('path');
-var webpack = require('webpack');
- 
+const path = require('path');
+
 module.exports = {
+  mode: 'production',
   entry: './helloworld.jsx',
   output: { path: __dirname, filename: 'helloworld.js' },
+  resolve: { extensions: ['.js', '.jsx'] },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
         }
       }
     ]

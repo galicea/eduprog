@@ -1,14 +1,14 @@
-//import { Injectable } from '@angular/core';
-//import { Action } from 'redux';
+import { Injectable } from '@angular/core';
 
-//@Injectable()
+export enum AkcjeXO {
+  ACTION_ZMIANA = 'ACTION_ZMIANA',
+}
+
+@Injectable()
 export class xoActions {
-  static ACTION_ZMIANA = 'ACTION_ZMIANA';
-
-  zmiana(x,y : string) {
-//    alert('zmiana['+x+', '+y+']')
+  zmiana(x: string, y: string) {
     return {
-      type: xoActions.ACTION_ZMIANA,
+      type: AkcjeXO.ACTION_ZMIANA,
       x,
       y
     };

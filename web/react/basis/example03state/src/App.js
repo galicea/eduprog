@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
-import {Button,Text} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 
 class App extends Component {
 
-  state: {
-    licznik: number,
-  };
-
-  constructor(props: {}) { // konieczne ustawienie stanu początkowego
+  constructor(props) { // konieczne ustawienie stanu początkowego
     super(props);
     this.state = {
       licznik: 0,
@@ -31,9 +27,9 @@ class App extends Component {
     return (
       <div>
         <p>Licznik={this.state.licznik.toString()}</p>
-        <Button bsStyle="primary" onClick={ this.klikniecie.bind(this) } >Kliknij {this.state.licznik.toString()}</Button><br />
+        <Button variant="primary" onClick={ this.klikniecie.bind(this) } >Kliknij {this.state.licznik.toString()}</Button><br />
         inny zapis:
-        <Button bsStyle="primary" onClick={ ()=>this.klikniecie() } >Kliknij {this.state.licznik.toString()}</Button>
+        <Button variant="primary" onClick={ ()=>this.klikniecie() } >Kliknij {this.state.licznik.toString()}</Button>
       </div>
     );
   }

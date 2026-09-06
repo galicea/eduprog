@@ -1,11 +1,8 @@
-
 class HelloWorld extends React.Component {
   render() {
     return <h1>Hello World</h1>
   }
 }
 
-ReactDOM.render(
-<HelloWorld />
-, document.getElementById('example00')
-);
+const root = ReactDOM.createRoot(document.getElementById('example00'));
+root.render(<HelloWorld />);

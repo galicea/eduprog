@@ -1,9 +1,5 @@
 import { createStore, } from 'redux';
 
-export type StanAplikacji = {
-  licznik: number,
-};
-
 export const ACTION_ZWIEKSZ = 'ACTION_ZWIEKSZ'
 
 const reducer = (state = {    licznik: 0,  }, action) => {
@@ -22,8 +18,7 @@ export const store = createStore(
   );
 
 export const Akcje = {
-  zwieksz(): void {
+  zwieksz() {
     store.dispatch({type: ACTION_ZWIEKSZ});
   }
 }
-

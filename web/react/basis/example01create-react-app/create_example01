@@ -1,6 +1,6 @@
-sudo npm -g install create-react-app
-create-react-app example01
+# Create React App jest wycofane (deprecated). Jego współczesnym zamiennikiem jest Vite.
+npm create vite@latest example01 -- --template react
 cd example01
-#yarn start
-npm start
-
+npm install
+# uruchomienie serwera dev:
+npm run dev

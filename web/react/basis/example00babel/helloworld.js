@@ -1,0 +1,10 @@
+"use strict";
+
+class HelloWorld extends React.Component {
+  render() {
+    return /*#__PURE__*/React.createElement("h1", null, "Hello World");
+  }
+}
+const root = ReactDOM.createRoot(document.getElementById('example00'));
+root.render(/*#__PURE__*/React.createElement(HelloWorld, null));
+

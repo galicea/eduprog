@@ -1,7 +1,4 @@
-// @flow
-
 import { applyMiddleware, createStore } from 'redux';
-import type { Cell, Spreadsheet } from './types.js';
 import logger from 'redux-logger';
 
 
@@ -14,23 +11,22 @@ export const ACTION_CLICK_CELL = 'ACTION_CELL'
 
 // actions creator
 export const Actions = {
-  left(idx : number)  {
+  left(idx)  {
 /*    console.log(idx);
     console.log('left'); -> logger*/
     store.dispatch({ type: ACTION_CLICK_LEFT, cellidx :idx });
   },
-  right(idx : number) {
+  right(idx) {
     store.dispatch({ type: ACTION_CLICK_RIGHT, cellidx : idx });
   },
-  cell(idx : number) {
+  cell(idx) {
     store.dispatch({ type: ACTION_CLICK_CELL, cellidx : idx });
   },
 }
 
 // reducer:
-const reducer = (state: Spreadsheet, action: Object)  => {
-//  var ncalc = state.calc; !! to nie jest pełna kopia
-  let ncalc: Cell[] = state.calc.slice(); // PŁYTKA KOPIA state.calc.
+const reducer = (state, action)  => {
+  let ncalc = state.calc.slice(); // PŁYTKA KOPIA state.calc.
   // Tzn. jest to nowa tablica, ale ncalc[i] to wciąż ten sam obiekt co state.calc[i].
   var sel_value = 0;
   var sel_color = '';
@@ -88,7 +84,7 @@ const reducer = (state: Spreadsheet, action: Object)  => {
 }
 
 // store
-function FillSpreadsheet(): Spreadsheet {
+function FillSpreadsheet() {
   var c=[];
   var x;
   var v=0;

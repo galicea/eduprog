@@ -1,12 +1,11 @@
 # pusty package.json:
-npm init
+npm init -y
 
-# react:
-npm install --save-dev react
-npm install --save-dev react-dom
+# react (buildy UMD: node_modules/react/umd) — react 18 to ostatnia wersja z UMD:
+npm install --save-dev react@^18 react-dom@^18
 
-# kompilator babel:
-npm install --save-dev babel-cli babel-preset-es2015
+# kompilator babel (wersja 7; @babel/cli 8 wymaga @babel/core 8, a tu potrzebne 7):
+npm install --save-dev @babel/cli@^7 @babel/core@^7 @babel/preset-env@^7 @babel/preset-react@^7
 
-# + pluginy:
-npm i babel-plugin-transform-react-jsx
+# kompilacja JSX -> helloworld.js:
+./build

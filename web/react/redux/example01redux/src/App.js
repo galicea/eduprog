@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import type { StanAplikacji } from './store.js';
 import { Akcje } from './store.js'
 
 class App extends Component {
@@ -13,5 +12,5 @@ class App extends Component {
 }
 
 export default connect(
-  (state: StanAplikacji) => ({ dane: state }),
+  (state) => ({ dane: state }),
 )(App);

@@ -3,38 +3,36 @@ var babel = require('gulp-babel');
 
 var path = {
   HTML: 'src/index.html',
-  JS: ['src/js/*.js', 'src/js/**/*.js'],
   JSX: ['src/*.jsx'],
-  REACT_SRC: 'node_modules/react/dist/react.min.js',
-  REACT_DOM_SRC: 'node_modules/react-dom/dist/react-dom.min.js',
+  REACT_SRC: 'node_modules/react/umd/react.production.min.js',
+  REACT_DOM_SRC: 'node_modules/react-dom/umd/react-dom.production.min.js',
   DEST: 'dist',
   DEST_JS: 'dist/js'
 };
 
-gulp.task('copy-react', function() {
+function copyReact() {
   return gulp.src(path.REACT_SRC)
     .pipe(gulp.dest(path.DEST_JS));
-});
+}
 
-gulp.task('copy-react-dom', function() {
+function copyReactDom() {
   return gulp.src(path.REACT_DOM_SRC)
     .pipe(gulp.dest(path.DEST_JS));
-});
+}
 
-gulp.task('jsx', function() {
+function jsx() {
   return gulp.src(path.JSX)
     .pipe(babel({
-      presets: ["react", 'es2015']
+      presets: ['@babel/preset-react']
     }))
     .pipe(gulp.dest(path.DEST_JS));
-});
+}
 
-gulp.task('html', function() {
+function html() {
   return gulp.src(path.HTML)
     .pipe(gulp.dest(path.DEST));
-});
+}
 
-gulp.task('build', ['copy-react', 'copy-react-dom', 'html', 'jsx'], function() {
-  console.log('Zbudowany!');
-});
-gulp.task('default', ['build']);
+var build = gulp.parallel(gulp.series(copyReact, copyReactDom), html, jsx);
+gulp.task('build', build);
+gulp.task('default', build);

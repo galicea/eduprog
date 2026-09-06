@@ -1,10 +1,8 @@
-// @flow
 // App.js
 import './kidspreasheet.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Actions } from './store.js';
-import type { Symbol, Cell, Spreadsheet } from './types.js';
 
 class SimpleCell extends Component {
   render() {
@@ -85,5 +83,5 @@ class App extends Component {
 
 // connect React-Redux
 export default connect(
-  (state : Spreadsheet) => ({ data: state }),
+  (state) => ({ data: state }),
 )(App);

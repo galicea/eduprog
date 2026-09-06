@@ -11,7 +11,7 @@ const initialAppState = {
 
 const calculator = (state = initialAppState, action) => {
 
-  const newExpression = (result : number, input : number, oper : number) => {
+  const newExpression = (result, input, oper) => {
     if ((result !== 0) && (oper !== 0)) {
       return result.toString()+
         (oper>0 ? '+' : '-') +
@@ -21,7 +21,7 @@ const calculator = (state = initialAppState, action) => {
       return result.toString();
     return input.toString();
   }
-  const Calculate = (result : number, input : number, oper : number) => {
+  const Calculate = (result, input, oper) => {
     if ((result !== 0) && (oper !== 0)) {
       return result+(oper*input);
     }

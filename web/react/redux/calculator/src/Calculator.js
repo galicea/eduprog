@@ -1,4 +1,3 @@
-// @flow
 // Calculator.js
 import './calculator.css';
 import React, {  Component } from 'react';

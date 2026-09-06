@@ -1,14 +1,14 @@
 # pusty package.json:
-#npm init
+npm init -y
 
-# react:
-npm install --save-dev react
-npm install --save-dev react-dom
+# react (bundle'owanie przez webpack - react trafi razem z kodem do helloworld.js):
+npm install --save-dev react react-dom
 
-# babel:
-npm install --save-dev babel-cli babel-preset-es2015 babel-preset-react babel-loader
+# babel 7 (@babel/preset-react 8/9 zmienia domyślny runtime JSX - potrzebne 7):
+npm install --save-dev @babel/core@^7 @babel/preset-env@^7 @babel/preset-react@^7 babel-loader
 
-# webpack:
-npm install --save-dev webpack
+# webpack 5:
+npm install --save-dev webpack webpack-cli
 
-webpack
+# budowa bundla (tworzy helloworld.js):
+npx webpack

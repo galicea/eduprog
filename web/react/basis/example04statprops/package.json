@@ -3,18 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.6.1"
-  },
-  "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react": "^19.2.8",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^19.2.8",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "structor": "structor"
-  }
+    "eject": "react-scripts eject"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
